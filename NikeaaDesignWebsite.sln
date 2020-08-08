@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29920.165
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NikeaaDesignWebsite", "NikeaaDesignWebsite\NikeaaDesignWebsite.csproj", "{393E55BF-5F2E-45A9-B3F3-0B9C102D555F}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "NikeaaDesignDatabase", "NikeaaDesignDatabase\NikeaaDesignDatabase.sqlproj", "{83CE0C9A-7CFC-4F65-8CD6-E76F0FFD3F0A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{393E55BF-5F2E-45A9-B3F3-0B9C102D555F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{393E55BF-5F2E-45A9-B3F3-0B9C102D555F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{393E55BF-5F2E-45A9-B3F3-0B9C102D555F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{393E55BF-5F2E-45A9-B3F3-0B9C102D555F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83CE0C9A-7CFC-4F65-8CD6-E76F0FFD3F0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{83CE0C9A-7CFC-4F65-8CD6-E76F0FFD3F0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{83CE0C9A-7CFC-4F65-8CD6-E76F0FFD3F0A}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{83CE0C9A-7CFC-4F65-8CD6-E76F0FFD3F0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{83CE0C9A-7CFC-4F65-8CD6-E76F0FFD3F0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{83CE0C9A-7CFC-4F65-8CD6-E76F0FFD3F0A}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D0C34000-834C-48CB-A91C-C72BE7B51F05}
+	EndGlobalSection
+EndGlobal

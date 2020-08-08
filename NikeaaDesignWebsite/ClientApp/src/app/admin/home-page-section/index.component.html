@@ -1,0 +1,38 @@
+<h1 class="p-3">Home Page Sections</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Title</th>
+      <th scope="col">Sort Order</th>
+      <th scope="col">IsActive</th>
+      <th><button class="btn btn-secondary" (click)="onAddNewClick()"><i class="fas fa-plus mr-2"></i>Add New</button></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let dataItem of dataItems; let i = index" [ngClass]="{ 'inactive': !dataItem.isActive }">
+      <th>{{dataItem.id}}</th>
+      <td>{{dataItem.title}}</td>
+      <td>{{dataItem.sortOrder}}</td>
+      <td><input type="checkbox" [checked]="dataItem.isActive" disabled /></td>
+      <th>
+        <button class="btn btn-primary mr-2" (click)="onEditClick(i)"><i class="fas fa-edit mr-2"></i>Edit</button>
+        <button class="btn btn-danger" (click)="onDeleteClick(i)"><i class="fas fa-trash-alt mr-2"></i>Delete</button>
+      </th>
+    </tr>
+  </tbody>
+</table>
+<div *ngIf="dataItems.length < 1">No Home Page Sections to display.</div>
+<div *ngIf="pageCount > 1" class="row p-3">
+  <div class="col-4">{{firstItemNumber}}-{{lastItemNumber}} of {{itemCount}} Items</div>
+  <div class="col-4 text-center">
+    <button class="btn btn-outline-secondary align-baseline mr-2" (click)="onGotoPageClick(newPage.value);">Go</button>
+    <input type="text" class="form-control pn-width" #newPage [value]="pageNumber" /> of {{pageCount}} Pages
+  </div>
+  <div class="col-4 text-right">
+    <button class="btn btn-outline-secondary mr-2" (click)="onFirstPageClick();"><< First</button>
+    <button class="btn btn-outline-secondary mr-2" (click)="onPreviousPageClick();">< Previous</button>
+    <button class="btn btn-outline-secondary mr-2" (click)="onNextPageClick();">Next ></button>
+    <button class="btn btn-outline-secondary" (click)="onLastPageClick();">Last >></button>
+  </div>
+</div>

@@ -1,0 +1,28 @@
+<div class="m-4">
+  <h2>Edit Admin Template</h2>
+  <hr />
+  <form *ngIf="record" (ngSubmit)="onSubmit()">
+    <div class="row">
+      <div class="col-2">
+        <label>
+          Title:
+        </label>
+        {{record.title}}
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-2">
+        <label>
+          Is Active:
+        </label>
+        {{record.isActive}}
+      </div>
+    </div>
+    <div class="row mt-4">
+      <div class="col-4">
+        <button type="button" class="btn btn-primary mr-2" (click)="onCancelClick()">Cancel</button>
+        <button type="submit" class="btn btn-danger">Delete</button>
+      </div>
+    </div>
+  </form>
+</div>

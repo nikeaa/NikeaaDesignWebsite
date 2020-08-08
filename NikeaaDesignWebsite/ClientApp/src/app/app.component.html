@@ -1,0 +1,10 @@
+<body>
+  <app-nav-menu></app-nav-menu>
+  <div class="container-fluid pmlr-0" [ngClass]="{ 'nav-padding': navBarDisplayed }">
+    <div *ngIf="showLoadingIndicator" class="overlay">
+      <!--<div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>-->
+      <img class="image-spinner" src="assets/logo-50x50.png" />
+    </div>
+    <router-outlet></router-outlet>
+  </div>
+</body>

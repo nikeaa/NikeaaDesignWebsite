@@ -1,0 +1,134 @@
+<div class="m-4">
+  <h2>Create Home Page Section</h2>
+  <hr />
+  <form [formGroup]="createForm" (ngSubmit)="onSubmit()">
+    <div class="row">
+      <div class="col-3">
+        <label>
+          Title:
+        </label>
+        <div *ngIf="vs.fieldIsInvalid(title)" class="d-inline">
+          <div *ngIf="vs.fieldIsRequired(formSubmitted, title)" class="d-inline error">
+            (required)
+          </div>
+        </div>
+        <input type="text" formControlName="title" class="form-control" [ngClass]="{ 'invalid': vs.fieldHasErrors(formSubmitted, title) }" />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4">
+        <label>
+          Description:
+        </label>
+        <div *ngIf="vs.fieldIsInvalid(description)" class="d-inline">
+          <div *ngIf="vs.fieldIsRequired(formSubmitted, description)" class="d-inline error">
+            (required)
+          </div>
+        </div>
+        <textarea formControlName="description" class="form-control"></textarea>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-3">
+        <label>
+          Image:
+        </label>
+        <div *ngIf="vs.fieldIsInvalid(image)" class="d-inline">
+          <div *ngIf="vs.fieldIsRequired(formSubmitted, image)" class="d-inline error">
+            (required)
+          </div>
+        </div>
+        <input type="file" formControlName="image" (change)="dataService.onSelectFile($event)" [ngClass]="{ 'invalid': vs.fieldHasErrors(formSubmitted, image) }" />
+      </div>
+      <div class="col-3 ml-3 mt-4">
+        <img [src]="dataService.image" style="height: 50px;" />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-4">
+        <label>
+          Link URL:
+        </label>
+        <div *ngIf="vs.fieldIsInvalid(linkUrl)" class="d-inline">
+          <div *ngIf="vs.fieldIsRequired(formSubmitted, linkUrl)" class="d-inline error">
+            (required)
+          </div>
+        </div>
+        <input type="url" formControlName="linkUrl" class="form-control" [ngClass]="{ 'invalid': vs.fieldHasErrors(formSubmitted, linkUrl) }" />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-2">
+        <label>
+          Is Active:
+        </label>
+        <div *ngIf="vs.fieldIsInvalid(isActive)" class="d-inline">
+          <div *ngIf="vs.fieldIsRequired(formSubmitted, isActive)" class="d-inline error">
+            (required)
+          </div>
+        </div>
+        <select formControlName="isActive" class="form-control is-active" [ngClass]="{ 'invalid': vs.fieldHasErrors(formSubmitted, isActive) }">
+          <option value=""></option>
+          <option value="true">Yes</option>
+          <option value="false">No</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-2">
+        <label>
+          Sort Order:
+        </label>
+        <div *ngIf="vs.fieldIsInvalid(sortOrder)" class="d-inline">
+          <div *ngIf="vs.fieldIsRequired(formSubmitted, sortOrder)" class="d-inline error">
+            (required)
+          </div>
+        </div>
+        <input type="number" formControlName="sortOrder" class="form-control col-5" [ngClass]="{ 'invalid': vs.fieldHasErrors(formSubmitted, sortOrder) }" />
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-2">
+        <label>
+          Text Align:
+        </label>
+        <div *ngIf="vs.fieldIsInvalid(textAlign)" class="d-inline">
+          <div *ngIf="vs.fieldIsRequired(formSubmitted, textAlign)" class="d-inline error">
+            (required)
+          </div>
+        </div>
+        <select formControlName="textAlign" class="form-control" [ngClass]="{ 'invalid': vs.fieldHasErrors(formSubmitted, textAlign) }">
+          <option value=""></option>
+          <option value="top-left">Top Left</option>
+          <option value="top-center">Top Center</option>
+          <option value="top-right">Top Right</option>
+          <option value="middle-left">Middle Left</option>
+          <option value="middle-center">Middle Center</option>
+          <option value="middle-right">Middle Right</option>
+          <option value="bottom-left">Bottom Left</option>
+          <option value="bottom-center">Bottom Center</option>
+          <option value="bottom-right">Bottom Right</option>
+        </select>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-2">
+        <label>
+          Text Color:
+        </label>
+        <div *ngIf="vs.fieldIsInvalid(textColor)" class="d-inline">
+          <div *ngIf="vs.fieldIsRequired(formSubmitted, textColor)" class="d-inline error">
+            (required)
+          </div>
+        </div>
+        <input type="color" formControlName="textColor" class="form-control col-5" [ngClass]="{ 'invalid': vs.fieldHasErrors(formSubmitted, textColor) }" />
+      </div>
+    </div>
+    <div class="row mt-4">
+      <div class="col-4">
+        <button type="button" class="btn btn-primary mr-2" (click)="onCancelClick()">Cancel</button>
+        <button type="submit" class="btn btn-success">Submit</button>
+      </div>
+    </div>
+  </form>
+</div>

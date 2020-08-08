@@ -1,0 +1,70 @@
+.w-100 {
+  width: 100%;
+}
+
+.top-left {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+}
+
+.top-center {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+
+.top-right {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.middle-left {
+  position: absolute;
+  top: 50%;
+  left: 8px;
+  transform: translate(0%, -50%);
+}
+
+.middle-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.middle-right {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translate(0%, -50%);
+}
+
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+}
+
+.bottom-center {
+  position: absolute;
+  bottom: 8px;
+  left: 50%;
+  transform: translate(-50%, 0%);
+}
+
+.bottom-right {
+  position: absolute;
+  bottom: 8px;
+  right: 8px;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 2em;
+}
+
+.description {
+}

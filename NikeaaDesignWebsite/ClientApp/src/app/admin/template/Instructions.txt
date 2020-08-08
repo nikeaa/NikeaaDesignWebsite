@@ -1,0 +1,26 @@
+Instructions for creating an admin page:
+
+1. Duplicate the admin/admin-template folder and rename the folder ('admin-new-name' for the purposes of this document)
+   a. Delete the 'instructions.txt' file from the new folder.
+2. Make the following text find/replace operations globally in the 'admin-new-name' folder:
+   a. 'admin-template' => 'admin-new-name'
+   b. 'AdminTemplate' => 'AdminNewName'
+   c. 'Admin Template' to => 'New Name Template'
+3. Create a model for the database table in the 'Models' folder called 'NewName'
+   a. Add all of the fields from the database
+   b. Add the table to the data context
+4. Duplicate the Controllers/AdminTemplateController.cs file. Make the following find/replace operations globally in the file:
+   a. 'AdminTemplate' => 'AdminNewName'
+   b. 'admin-template' => 'admin-new-name'
+5. Duplicate the services/admin-template folder, rename it 'admin-new-name', and do the following:
+   a. Rename the 'admin-template.service.ts' file to 'admin-new-name.service.ts'
+   b. Rename the 'admin'template.ts' file to 'admin-new-name.ts' and:
+      * Replace all of the fields except 'isDeleting' with the fields from the model created in step 3.
+   c. Perform the following find/replace globally in the 'services/admin-new-name' folder:
+      * 'AdminTemplate' => 'AdminNewName'
+      * 'admin-template' => 'admin-new-name'
+   d. Also, update the model fields in the 'services/admin-new-name/admin-new-name.service.ts' file to match the fields in the model from step 5b.
+6. Update the 'app.module.ts' as follows:
+   a. Duplicate the line with 'path: admin-template' in it.
+   b. Change 'admin-template' to 'admin-new-name'.
+   c. Change 'AdminTemplate' to 'AdminNewName'.
